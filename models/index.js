@@ -50,7 +50,7 @@ db.emotion.belongsToMany(db.child, { through: db.emotion_stats });
 
 (async () => {
     try {
-        await sequelize.sync({force:true});
+        await sequelize.sync();
         console.log('DB is successfully synchronized')
     } catch (error) {
         console.log(error)

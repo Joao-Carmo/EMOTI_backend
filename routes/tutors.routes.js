@@ -10,10 +10,6 @@ router.route('/')
     .post(tutorController.create)
     .put(tutorController.changePassword);
 
-// is this necessary?
-router.route('/:id')
-    .get(tutorController.getOne);
-
 router.all('*', (req, res) => {
     res.status(404).json({message: 'page questions not found'});
 })

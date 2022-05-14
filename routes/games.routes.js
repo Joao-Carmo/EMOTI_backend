@@ -2,8 +2,7 @@ const express = require('express');
 
 const gameController = require('../controllers/games.controller.js');
 
-//to write
-// const emotionsRouter = require('../routes/emotions.router.js');
+const emotionsRouter = require('../routes/emotions.routes.js');
 
 let router = express.Router({mergeParams: true})
 
@@ -15,7 +14,7 @@ router.route('/')
 router.route('/:id')
     .get(gameController.getOne);
 
-
+router.use('/:idG/emotions', emotionsRouter);
 
 router.all('*', (req, res) => {
     res.status(404).json({message: 'page questions not found'});

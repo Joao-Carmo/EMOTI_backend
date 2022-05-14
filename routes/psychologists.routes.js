@@ -10,10 +10,6 @@ router.route('/')
     .post(psychologistsController.create)
     .put(psychologistsController.changePassword);
 
-// is this necessary?
-router.route('/:id')
-    .get(psychologistsController.getOne);
-
 router.all('*', (req, res) => {
     res.status(404).json({message: 'page questions not found'});
 })
