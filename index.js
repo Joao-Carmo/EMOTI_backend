@@ -15,6 +15,9 @@ app.get('/', (req, res) => {
 
 app.use('/questions', require('./routes/questions.routes.js'));
 app.use('/games', require('./routes/games.routes.js'));
+app.use('/tutors', require('./routes/tutors.routes.js'));
+app.use('/psychologists', require('./routes/psychologists.routes.js'));
+app.use('/children', require('./routes/children.routes.js'));
 
 app.get('*', (req, res) =>{
     res.status(404).json({ message: 'Couldn\'t find a page'})

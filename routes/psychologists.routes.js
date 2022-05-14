@@ -1,5 +1,4 @@
 const express = require('express');
-const { TimeoutError } = require('sequelize/types');
 
 const psychologistsController = require('../controllers/psychologists.controller.js');
 
